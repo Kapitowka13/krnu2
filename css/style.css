@@ -1,0 +1,215 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*----------------------------------ОБНУЛЕНИЕ--------------------------------*/
+
+
+body {
+    background-color: #eae8dc;
+    background-repeat: no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin: auto;
+}
+.title {
+    height: 130px;
+    display: flex;
+    color: #E49C4E;
+    background-color: rgba(194, 206, 255, 0);
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #E49C4E;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin: 0px auto 0px auto;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #b47b3e;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+main {
+  flex: 1 1 auto;
+}
+.firstBlock {
+  height: 673px;
+  background-image: url("/Stanford.webp");
+  background-position-y: center;
+  background-position-x: center;
+  background-attachment: scroll;
+}
+#firstBlock_title {
+  text-align: center;
+  margin-top: 250px;
+  font-size: 72px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: -20px 0px 30px black;
+}
+footer {
+  height: 110px;
+  display: flex;
+  text-align: center;
+  background-color: #E49C4E;
+}
+.footerContainer {
+  display: flex;
+  width: 50%;
+}
+.footerColumn {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 40px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.footerColumn:last-child {
+  margin-right: 30px;
+}
+.infoTitles {
+  font-size: 14px;
+  font-weight: 600;
+}
