@@ -172,7 +172,7 @@ main {
 }
 .firstBlock {
   height: 673px;
-  background-image: url("/Stanford.webp");
+  background-image: url("Stanford.webp");
   background-position-y: center;
   background-position-x: center;
   background-attachment: scroll;
