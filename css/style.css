@@ -96,9 +96,32 @@ h1 {
     display: flex;
     color: #E49C4E;
     background-color: rgba(194, 206, 255, 0);
+    background-color: #eae8dc;
 }
+#headerTitle {
+  text-align: center;
+}
+header {                  /*---------------------------------*/
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.colorChange {            /*----------------------------------BUTTON JS*/
+  height: 25px;
+  width: 25px;
+  background-color: #040C1E;
+  border: none;
+}
+.colorChange:last-child { /*----------------------------------BUTTON JS*/
+  height: 25px;
+  width: 25px;
+  background-color: #E49C4E;
+  border: none;
+}
+
 /* Navbar container */
 .navbar {
+  height: auto; /*----auto = 52px*/
   overflow: hidden;
   background-color: #E49C4E;
   font-family: Arial;
@@ -135,7 +158,7 @@ h1 {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #b47b3e;
+  background-color: rgba(0, 0, 0, 0.123);
 }
 
 /* Dropdown content (hidden by default) */
@@ -167,24 +190,83 @@ h1 {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/*-------------------------MAIN----------------*/
 main {
-  flex: 1 1 auto;
+  flex: 1 1 auto; /* Важно для футера */
 }
+/**************************FIRSTBLOCK***************************/
 .firstBlock {
+  display: flex;
+  margin-top: 182px;
   height: 673px;
-  background-image: url("Stanford.webp");
+  background-image: url(../src/Stanford.webp);
   background-position-y: center;
   background-position-x: center;
-  background-attachment: scroll;
+  background-size: cover;
+  background-attachment: fixed;
 }
 #firstBlock_title {
   text-align: center;
-  margin-top: 250px;
   font-size: 72px;
   font-weight: 800;
   color: #fff;
-  text-shadow: -20px 0px 30px black;
+  text-shadow: -5px 0px 30px black;
 }
+/**************************SECOND BLOCK******************************/
+
+.secondBlock {
+  height: 1000px;
+  background: #eae8dc;
+}
+#newsBlock_title {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  color: #000;
+}
+#newsBlock_text {
+  text-align: center;
+}
+.newsLineBlock {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.news {
+  width: 35%;
+  height: 400px;
+  background-color: rgb(177, 177, 177);
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+}
+.news:hover {
+  transform: scale(1.004);
+}
+#news_1 {
+  background-image: url(../src/Biden.jpg);
+}
+#news_2 {
+  background-image: url(../src/gun-bullets.webp);
+}
+#news_3 {
+  background-image: url(../src/prog.jpeg);
+}
+#news_4 {
+  background-image: url(../src/man.webp);
+}
+.newsText {
+  color: #fff;
+  padding: 10px;
+}
+
+/**************************FOOTER******************************/
+
 footer {
   height: 110px;
   display: flex;
@@ -209,7 +291,191 @@ a {
 .footerColumn:last-child {
   margin-right: 30px;
 }
+.footerColumn:first-child {
+  margin-left: 0px;
+}
 .infoTitles {
   font-size: 14px;
   font-weight: 600;
+}
+/*------------------------------------------------------PHONE----------------*/
+.topDiv_phone {
+  background-color: #698ae6;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: end;
+}
+.topDiv_phone_title {
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sideButton {
+  width: 9%;
+  height: 30px;
+  position: fixed;
+  background-color: #E49C4E;
+  border: none;
+  padding: 0;
+}
+/*------------------------------------------------------SIDENAV---------------------*/
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: none;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #698ae6;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/*------------------------------------------------------------------------PHONE FIRSTBLOCK--------------------------*/
+
+.phone_firstBlock {
+  width: 100%;
+  height: 600px;
+  background-image: url(../src/Stanford.webp);
+  background-position: center center;
+  display: flex;
+}
+#phone_firstBlock_title {
+  text-align: center;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 1px 1px 6px #698ae6;
+}
+.phoneNews {
+  margin-top: 15px;
+  width: 90%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+}
+.phoneNews:last-child {
+  margin-bottom: 15px;
+}
+.phoneNewsText {
+  color: #fff;
+  padding: 10px;
+}
+.phone_footer {
+  height: 80px;
+  background-color: #333;
+  display: flex;
+}
+.phone_footerColumn {
+  margin-top: 5px;
+  margin-left: 15px;
+  color: #e4e4e4;
+  font-size: 10px;
+  text-align: left;
+}
+.phone_footerColumn:last-child {
+  margin-right: 15px;
+}
+.phone_footerColumn:first-child {
+  margin-left: 15px;
+}
+
+
+/*--------------АДАПТИВ---------------*/
+@media (min-width: 1024px) {
+  .phone {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  main {
+    display: none;
+  }
+  .phone_footer {
+    justify-content: end;
+  }
+  .phone_footerColumn {
+    justify-content:space-between;
+  }
+}
+@media (min-width: 601px) {
+  .sidenav {
+    display: none;
+  }
+  .topnav {
+    display: none;
+  }
+  .topDiv_phone {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  main {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
 }
