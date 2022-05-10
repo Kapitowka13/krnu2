@@ -1,10 +1,8 @@
-@charset "UTF-8";
 /* Указываем box sizing */
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
@@ -72,55 +70,120 @@ select {
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
 
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #030f27;
+/*----------------------------------ОБНУЛЕНИЕ--------------------------------*/
+
+
+body {
+    background-color: #eae8dc;
+    background-repeat: no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin: auto;
+}
+.title {
+    height: 130px;
+    display: flex;
+    color: #E49C4E;
+    background-color: rgba(194, 206, 255, 0);
+    background-color: #eae8dc;
+}
+#headerTitle {
+  text-align: center;
+}
+header {                  /*---------------------------------*/
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.colorChange {            /*----------------------------------BUTTON JS*/
+  height: 25px;
+  width: 25px;
+  background-color: #040C1E;
+  border: none;
+}
+.colorChange:last-child { /*----------------------------------BUTTON JS*/
+  height: 25px;
+  width: 25px;
+  background-color: #E49C4E;
+  border: none;
+}
+
+/* Navbar container */
+.navbar {
+  height: auto; /*----auto = 52px*/
+  overflow: hidden;
+  background-color: #E49C4E;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
   color: white;
-  padding: 10px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin: 0px auto 0px auto;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
   font-size: 16px;
   border: none;
-  cursor: pointer;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0.123);
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
+  float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  text-transform: none;
   display: block;
+  text-align: left;
 }
 
-/* Change color of dropdown links on hover */
+/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
@@ -128,48 +191,140 @@ select {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #030f27;
+/*-------------------------MAIN----------------*/
+main {
+  flex: 1 1 auto; /* Важно для футера */
+}
+/**************************FIRSTBLOCK***************************/
+.firstBlock {
+  display: flex;
+  margin-top: 182px;
+  height: 673px;
+  background-image: url(../src/Stanford.webp);
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#firstBlock_title {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: -5px 0px 30px black;
+}
+/**************************SECOND BLOCK******************************/
+
+.secondBlock {
+  height: 1000px;
+  background: #eae8dc;
+}
+#newsBlock_title {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  color: #000;
+}
+#newsBlock_text {
+  text-align: center;
+}
+.newsLineBlock {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.news {
+  width: 35%;
+  height: 400px;
+  background-color: rgb(177, 177, 177);
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+}
+.news:hover {
+  transform: scale(1.004);
+}
+#news_1 {
+  background-image: url(../src/Biden.jpg);
+}
+#news_2 {
+  background-image: url(../src/gun-bullets.webp);
+}
+#news_3 {
+  background-image: url(../src/prog.jpeg);
+}
+#news_4 {
+  background-image: url(../src/man.webp);
+}
+.newsText {
+  color: #fff;
+  padding: 10px;
 }
 
-/*@font-face {
-    font-family: "Le Beaune New";
-    font-style: normal;
-    font-weight: 400;
-    src: local("LeBeauneNew"),
-         url("/fonts/LeBeauneNew.woff") format("woff"),
-         url("/fonts/LeBeauneNew.woff2") format("woff2");
-  }*/
+/**************************FOOTER******************************/
+
+footer {
+  height: 110px;
+  display: flex;
+  text-align: center;
+  background-color: #E49C4E;
+}
+.footerContainer {
+  display: flex;
+  width: 50%;
+}
+.footerColumn {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 40px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.footerColumn:last-child {
+  margin-right: 30px;
+}
+.footerColumn:first-child {
+  margin-left: 0px;
+}
+.infoTitles {
+  font-size: 14px;
+  font-weight: 600;
+}
+/*------------------------------------------------------PHONE----------------*/
 .topDiv_phone {
-  background-color: #030F27;
-  height: 50px;
+  background-color: #698ae6;
+  height: 30px;
   width: 100%;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
 }
-
 .topDiv_phone_title {
   color: #fff;
-  margin: auto;
-  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .sideButton {
+  width: 9%;
+  height: 30px;
   position: fixed;
-  height: 50px;
+  background-color: #E49C4E;
+  border: none;
+  padding: 0;
 }
-
 /*------------------------------------------------------SIDENAV---------------------*/
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 100%;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -178,17 +333,6 @@ select {
   overflow-x: hidden;
   padding-top: 20px;
   display: none;
-}
-
-.close {
-  margin-left: 80%;
-  width: 30px;
-  height: 30px;
-  background-image: url(../src/close.png);
-  background-size: cover;
-  background-position: center;
-  border: none;
-  background-color: inherit;
 }
 
 /* Style the sidenav links and the dropdown button */
@@ -200,7 +344,7 @@ select {
   display: block;
   border: none;
   background: none;
-  width: 100%;
+  width:100%;
   text-align: left;
   cursor: pointer;
   outline: none;
@@ -213,16 +357,14 @@ select {
 
 /* Main content */
 .main {
-  margin-left: 200px;
-  /* Same as the width of the sidenav */
-  font-size: 20px;
-  /* Increased text to enable scrolling */
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
 /* Add an active class to the active dropdown button */
 .active {
-  background-color: #030F27;
+  background-color: #698ae6;
   color: white;
 }
 
@@ -239,1188 +381,101 @@ select {
   padding-right: 8px;
 }
 
-body {
-  background-color: #030f27;
-}
+/*------------------------------------------------------------------------PHONE FIRSTBLOCK--------------------------*/
 
-header {
-  background-color: #17082d;
-  font-family: Jost;
-}
-
-header .topInfo_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  background-color: #17082d;
-}
-
-header .topInfo_container .topInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-}
-
-header .topInfo_container .topInfo a {
-  text-decoration: none;
-  color: #fff;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-header .topInfo_container .topInfo a:not(:last-child) {
-  margin-right: 20px;
-}
-
-header .topInfo_container .topInfo:first-child {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  padding-left: 10%;
-}
-
-header .topInfo_container .topInfo:last-child {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding-right: 10%;
-}
-
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  /* Важно для футера */
-  /*--------------------------------------------------------------PHONE NAV--------------------*/
-  /* The Overlay (background) */
-  /* Position the content inside the overlay */
-  /* The navigation links inside the overlay */
-  /* When you mouse over the navigation links, change their color */
-  /* Position the close button (top right corner) */
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  /*---------------------------------------------------FIRST BLOCK------------------------------------------------------*/
-}
-
-main .navigation_container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: #030F27;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .navigation_container .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .navigation_container .navigation {
+.phone_firstBlock {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 600px;
+  background-image: url(../src/Stanford.webp);
+  background-position: center center;
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-family: Jost;
 }
-
-main .top_phone_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 35px;
-  width: 100%;
-  position: fixed;
-  background-color: #030F27;
-}
-
-main .topNavTitle {
-  margin: auto;
-  text-transform: capitalize;
-}
-
-main .openNav {
-  width: 35px;
-  position: inherit;
-  right: 0;
-}
-
-main .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 100%;
-  width: 0;
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: black;
-  /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/opacity */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-main .overlay-content {
-  position: relative;
-  top: 25%;
-  /* 25% from the top */
-  width: 100%;
-  /* 100% width */
+#phone_firstBlock_title {
   text-align: center;
-  /* Centered text/links */
-  margin-top: 30px;
-  /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-main .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  /* Display block instead of inline */
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  /* Transition effects on hover (color) */
-}
-
-main .overlay a:hover, main .overlay a:focus {
-  color: #f1f1f1;
-}
-
-main .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  main .overlay a {
-    font-size: 20px;
-  }
-  main .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
-main .firstBlock {
-  background-image: url(../src/firstBackground.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 920px;
-  display: flow-root;
-}
-
-main .firstBlock #verticalLine1 {
-  margin-top: 128px;
-  width: 1px;
-  height: 100px;
-  background-color: #fff;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-main .firstBlock #firstBlock_text {
-  margin-top: 29px;
-  text-align: center;
+  font-size: 48px;
   color: #fff;
-  margin-bottom: 35px;
+  text-shadow: 1px 1px 6px #698ae6;
 }
-
-main .firstBlock #firstBlock_text #p1 {
-  text-shadow: 2px 3px 15px #000;
-  color: #fff;
-  margin-top: 0px;
-  font-family: 'Le Beaune New';
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-main .firstBlock #firstBlock_text h1 {
-  text-shadow: 2px 3px 15px #000;
-  margin-top: 0px;
-  font-family: 'Le Beaune New';
-  font-size: 100px;
-  line-height: 100px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-main .firstBlock #firstBlock_text #p2 {
-  text-shadow: 2px 3px 15px #000;
-  color: #fff;
-  margin-top: 100px;
-  font-family: Jost;
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-}
-
-main .firstBlock #firstBlock_text #p3 {
-  text-shadow: 2px 3px 15px #000;
-  color: #fff;
-  margin-top: 170px;
-  font-family: 'Le Beaune New';
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-main .firstBlock #verticalLine2 {
-  width: 1px;
-  height: 150px;
-  background-color: #fff;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-main .secondBlock {
-  display: flow-root;
-  height: 688px;
-  background-color: #fff;
-}
-
-main .secondBlock #verticalLine3 {
-  width: 1px;
-  height: 100px;
-  background-color: #d1d1d1;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .secondBlock .secondBlock_text {
-  text-align: center;
-}
-
-main .secondBlock .secondBlock_text #p4 {
-  margin-top: 20px;
-  font-family: 'Le Beaune New';
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #999999;
-}
-
-main .secondBlock .secondBlock_text h3 {
-  margin-top: 30px;
-  text-transform: uppercase;
-  font-family: 'Le Beaune New';
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #222222;
-}
-
-main .secondBlock .secondBlock_text #p5 {
-  margin-top: 58px;
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  color: #373737;
-  margin-bottom: 65px;
-}
-
-main .secondBlock .secondBlock_text #p6 {
-  font-family: 'Jost - Semi';
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #777777;
-}
-
-main .thirdBlock {
-  height: 1202px;
-  background-color: #f3f3f3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .thirdBlock .news_container {
-  margin-top: -90px;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .thirdBlock .news_container .news {
-  width: 570px;
-  margin-bottom: 30px;
-}
-
-main .thirdBlock .news_container .news img {
-  width: 570px;
-  height: 400px;
-}
-
-main .thirdBlock .news_container .news h3 {
+.phoneNews {
   margin-top: 15px;
-  padding-left: 36px;
-  font-family: 'Le Beaune New';
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #222222;
-}
-
-main .thirdBlock .news_container .news p {
-  margin-top: 15px;
-  padding-left: 36px;
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  color: #696969;
-  margin-bottom: 26px;
-}
-
-main .thirdBlock .news_container .news a {
-  padding-left: 36px;
-  font-family: 'Jost - Semi';
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #777777;
-  text-decoration: none;
-}
-
-main .thirdBlock .news_container_end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding-right: 1%;
-}
-
-main .thirdBlock .news_container_start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  padding-left: 1%;
-}
-
-main .fourthBlock {
-  height: 455px;
-  background-color: #030f27;
-  text-align: center;
-}
-
-main .fourthBlock p {
-  margin-top: 100px;
-  font-family: 'Le Beaune New';
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
-
-main .fourthBlock h3 {
-  margin-top: 50px;
-  text-transform: uppercase;
-  font-family: 'Le Beaune New';
-  font-size: 50px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-main .fourthBlock button {
-  margin-top: 90px;
-  width: 175px;
-  height: 60px;
-  background-color: #0082fa;
-  border-radius: 4px;
-  border: none;
-  font-family: 'Jost';
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #ffffff;
-}
-
-main .fourthBlock button:hover {
-  background-color: #0265c2;
-}
-
-main .fifthBlock {
-  background-color: #fff;
-  height: 750px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .fifthBlock .fifth_container {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-main .fifthBlock .fifth_container .fifthText {
-  width: 570px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-main .fifthBlock .fifth_container .fifthText #verticalLine4 {
-  width: 1px;
-  height: 100px;
-  background-color: #d1d1d1;
-}
-
-main .fifthBlock .fifth_container .fifthText h5 {
-  font-family: 'Le Beaune New';
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #999999;
-}
-
-main .fifthBlock .fifth_container .fifthText h3 {
-  text-transform: uppercase;
-  font-family: 'Le Beaune New';
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #222222;
-}
-
-main .fifthBlock .fifth_container .fifthText p {
-  margin-top: 50px;
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  color: #373737;
-}
-
-main .fifthBlock .fifth_container .fifthImage {
-  width: 570px;
-  margin-top: 175px;
-}
-
-main .fifthBlock .fifth_container_end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-main .fifthBlock .fifth_container_start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-main .sixthBlock {
-  height: 378px;
-  background-color: #030f27;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .sixthBlock .sixthBlock_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-}
-
-main .sixthBlock .sixthBlock_container .column {
-  margin-left: 82px;
-  margin-right: 82px;
-  text-align: center;
-}
-
-main .sixthBlock .sixthBlock_container .column img {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .sixthBlock .sixthBlock_container .column h3 {
-  font-family: 'Le Beaune New';
-  font-size: 52px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #fefefe;
-}
-
-main .sixthBlock .sixthBlock_container .column h6 {
-  font-family: 'Le Beaune New';
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #8dd7e5;
-}
-
-main .sixthBlock .sixthBlock_container .verticalLine_sixthBlock {
-  width: 1px;
-  height: 99px;
-  background-color: #ffffff;
-}
-
-main .seventhBlock {
-  min-height: 1080px;
-  background-color: #fff;
-  display: -ms-grid;
-  display: grid;
-}
-
-main .seventhBlock .seventhBlock_container #verticalLine {
-  margin-top: 100px;
-  width: 1px;
-  height: 100px;
-  background-color: #d1d1d1;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .seventhBlock .seventhBlock_container p {
-  margin-top: 50px;
-  text-align: center;
-  font-family: 'Le Beaune New';
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #999999;
-}
-
-main .seventhBlock .seventhBlock_container h3 {
-  margin-top: 25px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Le Beaune New';
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #222222;
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container {
-  margin-top: 25px;
-  margin-bottom: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor {
-  -webkit-box-shadow: 0px 30px 50px 0px rgba(3, 15, 39, 0.1);
-          box-shadow: 0px 30px 50px 0px rgba(3, 15, 39, 0.1);
-  margin: auto;
-  margin-top: 50px;
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage1 {
-  background-image: url(../src/teachers/LudmylaHomenko.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage2 {
-  background-image: url(../src/teachers/DenysZagirnyak.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage3 {
-  background-image: url(../src/teachers/OksanaOnischenko.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage4 {
-  background-image: url(../src/teachers/ValentynaGlyhova.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage5 {
-  background-image: url(../src/teachers/LudmylaKrot.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage6 {
-  background-image: url(../src/teachers/RaisaTsygan.png);
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor .instructorImage {
-  width: 360px;
-  height: 400px;
-  background-color: #17082d;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor h5 {
-  text-transform: unset;
-  margin-top: 15px;
-  text-align: left;
-  padding-left: 20px;
-  font-family: 'Jost';
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #222222;
-}
-
-main .seventhBlock .seventhBlock_container .instructor_container .instructor p {
-  margin-top: -25px;
-  padding-bottom: 10px;
-  text-align: left;
-  padding-left: 16px;
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  color: #696969;
-}
-
-main .eighthBlock {
-  background-image: url(../src/bg_8.png);
-  background-position-x: center;
-  height: 872px;
-  background-color: #f3f3f3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .eighthBlock .eighth_container {
   width: 90%;
-  margin-right: auto;
+  height: 350px;
   margin-left: auto;
-  display: -ms-grid;
-  display: grid;
-}
-
-main .eighthBlock .eighth_container #varticalLine {
-  width: 1px;
-  height: 100px;
-  background-color: #bdbcbc;
-}
-
-main .eighthBlock .eighth_container p {
-  margin-top: 20px;
-  font-family: 'Le Beaune New';
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #333333;
-}
-
-main .eighthBlock .eighth_container .title_a {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-right: auto;
   display: flex;
+  align-items: flex-end;
+  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
 }
-
-main .eighthBlock .eighth_container .title_a h3 {
-  font-family: 'Le Beaune New';
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #222222;
-}
-
-main .eighthBlock .news_container {
-  margin-top: 100px;
-  width: 50%;
-  height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .eighthBlock .news_container button {
-  width: 50px;
-  background-color: #f3f3f3;
-  border: none;
-}
-
-main .eighthBlock .news_container button:hover {
-  background-color: #e4e4e4;
-}
-
-main .eighthBlock .news_container button:first-child {
-  margin-right: 20px;
-}
-
-main .eighthBlock .news_container button:last-child {
-  margin-left: 20px;
-}
-
-main .eighthBlock .news_container .news {
-  width: 500px;
-  height: 600px;
-  margin-bottom: 30px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 30px 50px 0px rgba(3, 15, 39, 0.1);
-          box-shadow: 0px 30px 50px 0px rgba(3, 15, 39, 0.1);
-}
-
-main .eighthBlock .news_container .news img {
-  width: 500px;
-  height: 400px;
-}
-
-main .eighthBlock .news_container .news p {
-  margin-left: 15px;
-  margin-top: 15px;
-  text-transform: uppercase;
-  font-family: 'Jost';
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 400;
-  color: #bbbbbb;
-}
-
-main .eighthBlock .news_container .news h4 {
-  margin-left: 15px;
-  margin-top: 28px;
-  text-transform: uppercase;
-  font-family: 'Le Beaune New';
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #222222;
-  margin-bottom: 38px;
-}
-
-main .eighthBlock .news_container .news a {
-  margin-left: 15px;
-  text-decoration: none;
-  font-family: 'Jost';
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #777777;
-}
-
-main .eighthBlock .news_container_end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding-right: 1%;
-}
-
-main .eighthBlock .news_container_start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  padding-left: 1%;
-}
-
-footer {
-  min-height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  background-color: #17082d;
-}
-
-footer .footerContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer .footerContainer .footerColumn {
-  margin-top: 25px;
-  color: #fff;
-  font-size: 12px;
-  margin-left: 40px;
-  text-align: left;
-  margin-left: 12%;
-  margin-right: 12%;
-}
-
-footer .footerContainer .footerColumn .column_text_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer .footerContainer .footerColumn .column_text_container .first_text_footer {
-  color: #8dd7e5;
-}
-
-footer .footerContainer .footerColumn .infoTitles {
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 400;
-  color: #e3e6ea;
+.phoneNews:last-child {
   margin-bottom: 15px;
 }
-
-footer .footerContainer .footerColumn .column_text {
-  width: 130px;
-}
-
-footer .footerContainer .footerColumn .column_text p {
-  font-family: Jost;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #c0d0db;
-  text-decoration: none;
-}
-
-footer .footerContainer .footerColumn .column_text a {
-  font-family: Jost;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #c0d0db;
-  text-decoration: none;
-}
-
-footer {
-  min-height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  background-color: #17082d;
-}
-
-.footerContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footerColumn {
-  margin-top: 25px;
+.phoneNewsText {
   color: #fff;
-  font-size: 12px;
-  margin-left: 40px;
-  text-align: left;
-  margin-left: 12%;
-  margin-right: 12%;
+  padding: 10px;
 }
-
-.column_text_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.phone_footer {
+  height: 80px;
+  background-color: #333;
   display: flex;
 }
-
-.column_text {
-  width: 130px;
-}
-
-p {
-  font-family: Jost;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #c0d0db;
-  text-decoration: none;
-}
-
-a {
-  font-family: Jost;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #c0d0db;
-  text-decoration: none;
-}
-
-.infoTitles {
-  font-family: Jost;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 400;
-  color: #e3e6ea;
-  margin-bottom: 15px;
-}
-
-.first_text_footer {
-  color: #8dd7e5;
-}
-
-.footer_phone {
-  width: 100%;
-  height: 100px;
-}
-
-.footer_column_phone {
+.phone_footerColumn {
+  margin-top: 5px;
+  margin-left: 15px;
+  color: #e4e4e4;
+  font-size: 10px;
   text-align: left;
-  margin-right: auto;
-  margin-left: auto;
+}
+.phone_footerColumn:last-child {
+  margin-right: 15px;
+}
+.phone_footerColumn:first-child {
+  margin-left: 15px;
 }
 
-.footer_column_phone p {
-  font-size: 12px;
-  margin-left: 10px;
-}
 
-.footer_column_phone a {
-  font-size: 10px;
-  margin-left: 10px;
-}
-
-.footer_column_phone:last-child p {
-  font-size: 12px;
-  margin-right: 10px;
-}
-
-.footer_column_phone:last-child a {
-  font-size: 10px;
-  margin-right: 10px;
-}
-
-@media (max-width: 375px) {
-  #firstBlock {
-    height: 100px;
-  }
-  #firstBlock #firstBlock_text #h1 {
-    font-size: 45px;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  .thirdBlock .news_container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-  .seventhBlock .seventhBlock_container .instructor_container .instructor {
-    width: 280px;
-  }
-  .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage1, .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage2, .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage3, .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage4, .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage5, .seventhBlock .seventhBlock_container .instructor_container .instructor #instructorImage6 {
-    width: 280px;
+/*--------------АДАПТИВ---------------*/
+@media (min-width: 1024px) {
+  .phone {
+    display: none;
   }
 }
 
-@media (max-width: 1004px) {
-  header {
+@media (max-width: 1023px) {
+  main {
     display: none;
   }
-  #firstBlock {
-    height: 550px;
+  .phone_footer {
+    justify-content: end;
   }
-  #firstBlock #verticalLine1 {
-    display: none;
-  }
-  #firstBlock #firstBlock_text #p1 {
-    display: none;
-  }
-  #firstBlock #firstBlock_text #h1 {
-    font-size: 62px;
-  }
-  #firstBlock #firstBlock_text #p2 {
-    display: none;
-  }
-  #firstBlock #firstBlock_text #p3 {
-    display: none;
-  }
-  #firstBlock #verticalLine2 {
-    display: none;
-  }
-  #secondBlock #verticalLine3 {
-    display: none;
-  }
-  #secondBlock #p5 {
-    margin-top: 10px;
-  }
-  #secondBlock #p6 {
-    display: none;
-  }
-  #thirdBlock {
-    height: 850px;
-  }
-  #thirdBlock .news_container {
-    height: 450px;
-  }
-  #thirdBlock #newsImg1, #thirdBlock #newsImg2, #thirdBlock #newsImg3, #thirdBlock #newsImg4 {
-    height: 180px;
-  }
-  #thirdBlock h3 {
-    font-size: 16px;
-    padding-top: 0px;
-    padding-left: 8px;
-  }
-  #thirdBlock p {
-    font-size: 12px;
-    padding-top: 0px;
-    padding-left: 8px;
-  }
-  #fifthBlock {
-    display: none;
-  }
-  .sixthBlock {
-    display: none;
-  }
-  #nav_cont {
-    display: none;
-  }
-  #sixthBlock {
-    display: none;
-  }
-  #footer {
-    display: none;
-  }
-  .title {
-    font-size: 34px;
-  }
-  .paragraph {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 14px;
+  .phone_footerColumn {
+    justify-content:space-between;
   }
 }
-
-@media (min-width: 1005px) {
-  ._phone {
+@media (min-width: 601px) {
+  .sidenav {
     display: none;
   }
-  #top_phone_nav {
+  .topnav {
     display: none;
   }
   .topDiv_phone {
     display: none;
   }
 }
-
-@media (max-width: 519px) {
-  #eighthBlock {
-    height: 550px;
-  }
-  #eighthBlock #news_container1 {
-    display: none;
-    height: 360px;
-  }
-  #eighthBlock #news_container1 #news1 {
-    height: 360px;
-  }
-  #eighthBlock #news_container1 #news1 #firstNewsImage {
-    height: 160px;
-  }
-  #eighthBlock #news_container1 #news1 h4 {
-    font-size: 10px;
-    min-height: 80px;
-    max-height: 80px;
-  }
-  #eighthBlock #news_container2 {
-    margin: auto;
-    height: 500px;
-    width: 90%;
-  }
-  #eighthBlock #news_container2 #news2 {
-    height: 500px;
-    width: 100%;
-  }
-  #eighthBlock #news_container2 #news2 #secondNewsImage {
-    height: 260px;
-  }
-  #eighthBlock #news_container2 #news2 h4 {
-    font-size: 10px;
-    min-height: 80px;
-    max-height: 80px;
-  }
-  #eighthBlock #news_container2 #carouselButtonNext {
+@media (max-width: 600px) {
+  header {
     display: none;
   }
-}
-
-@media (max-width: 768px) {
-  #firstBlock #h1 {
-    margin-top: 15%;
+  .title {
+    display: none;
   }
-  #secondBlock {
-    height: auto;
+  main {
+    display: none;
   }
-  #secondBlock #p5 {
-    padding-bottom: 120px;
-  }
-  #eighthBlock {
-    height: 450px;
-  }
-  #eighthBlock #news_container1 {
-    margin-top: 30px;
-    height: 260px;
-  }
-  #eighthBlock #news_container1 #news1 {
-    height: 360px;
-  }
-  #eighthBlock #news_container1 #news1 #firstNewsImage {
-    height: 160px;
-  }
-  #eighthBlock #news_container1 #news1 h4 {
-    font-size: 10px;
-    min-height: 80px;
-    max-height: 80px;
-  }
-  #eighthBlock #news_container1 #carouselButtonBack {
-    height: 360px;
-  }
-  #eighthBlock #news_container2 {
-    margin-top: 30px;
-    height: 260px;
-  }
-  #eighthBlock #news_container2 #news2 {
-    height: 360px;
-  }
-  #eighthBlock #news_container2 #news2 #secondNewsImage {
-    height: 160px;
-  }
-  #eighthBlock #news_container2 #news2 h4 {
-    font-size: 10px;
-    min-height: 80px;
-    max-height: 80px;
-  }
-  #eighthBlock #news_container2 #carouselButtonNext {
-    height: 360px;
+  footer {
+    display: none;
   }
 }
