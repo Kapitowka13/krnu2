@@ -385,7 +385,7 @@ a {
 
 .phone_firstBlock {
   width: 100%;
-  height: 600px;
+  min-height: 120px;
   background-image: url(../src/Stanford.webp);
   background-position: center center;
   display: flex;
@@ -396,25 +396,11 @@ a {
   color: #fff;
   text-shadow: 1px 1px 6px #698ae6;
 }
-.phoneNews {
-  margin-top: 15px;
-  width: 90%;
-  height: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
-  background-position-y: center;
-  background-position-x: center;
-  background-size: cover;
+.phone_secondBlock {
+  min-height: 800px;
 }
-.phoneNews:last-child {
-  margin-bottom: 15px;
-}
-.phoneNewsText {
-  color: #fff;
-  padding: 10px;
+#phone_secondBlock_title {
+  text-align: center;
 }
 .phone_footer {
   height: 80px;
