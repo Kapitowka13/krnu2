@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Навчання через дослідження</title>
+  <link rel="stylesheet" type="text/css" href="css/copy.css">
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js'></script>
+  <link rel="stylesheet" href="css/queryLoader.css" type="text/css">
+  <script type='text/javascript' src='scripts/queryLoader.js'></script>
+</head>
+
+<body>
+  <!--Под компы-->
+    <header>
+        <div id="title" class="title">
+          <img id="logo" src="src/logo_brown.png">
+          <h1 id="headerTitle">DEPARTMENT OF COMPUTER ENGINEERING AND ELECTRONICS</h1>
+          <button class="colorChange" id="colorToBlack"></button>
+          <button class="colorChange" id="colorToBrown"></button>
+        </div>
+        <div class="navbar" id="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">Про кафедру
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Історія</a>
+              <a href="#">Склад</a>
+              <a href="#">Ліцензії і сертифікати</a>
+              <a href="#">Підсумки рейтингування</a>
+              <a href="#">Випускники</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Вступнику
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Інформація про освітні програми</a>
+                <a href="#">Правила прийому</a>
+                <a href="#">Програма вступних випробувань</a>
+                <a href="#">Іноземним студентам</a>
+                <a href="#">Контакти</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Освіта</button>
+              <div class="dropdown-content">
+                <a href="#">Розклад</a>
+                <a href="#">Якість освіти</a>
+                <a href="#">Неформальна і дуальна освіта</a>
+                <a href="#">Віртуальний освітній простір</a>
+                <a href="#">Перший (бакалаврський) рівень вищої освіти</a>
+                <a href="#">Другий (магістерський) рівень вищої освіти</a>
+                <a href="#">Третій (освітньо-науковий) рівень вищої освіти</a>
+              </div>
+            </div>
+          <div class="dropdown">
+              <button class="dropbtn">Акредитація
+              </button>
+              <div class="dropdown-content">
+                <a href="design-and-goals.html">Проектування та цілі освітньої програми</a>
+                <a href="structure-and-content.html">Структура та зміст освітньої програми</a>
+                <a href="educational-program-access.html">Доступ до освітньої програми та визнання результатів навчання</a>
+                <a href="teaching-and-learning.html">Навчання і викладання за освітньою програмою</a>
+                <a href="test-measures.html">Контрольні заходи, оцінювання здобувачів вищої освіти та академічна доброчесність</a>
+                <a href="human-resources.html">Людські ресурси</a>
+                <a href="educational-environment.html">Освітнє середовище та матеріальні ресурси</a>
+                <a href="internal-quality-assurance.html">Внутрішнє забезпечення якості освітньої програми</a>
+                <a href="transparency-and-publicity.html">Прозорість і публічність</a>
+                <a href="learning-through-research.html">Навчання через дослідження</a>
+                <a href="prospects-for-development.html">Перспективи подальшого розвитку ОП</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Наукова діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Наукові здобутки</a>
+                <a href="#">Теми НДР</a>
+                <a href="#">Наукові заходи</a>
+                <a href="#">Наукова діяльність здобувачів освіти</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Виховна діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="#">План роботи</a>
+                <a href="#">Заходи</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Міжнародна діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Договори про співпрацю</a>
+                <a href="#">Закордонні стажування</a>
+                <a href="#">Міжнародні здобутки</a>
+                <a href="#">Міжнародний конкурс студентських наукових робіт</a>
+              </div>
+            </div>
+          <div class="dropdown">
+            <button class="dropbtn">Практична підготовка
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Бази практик</a>
+              <a href="#">Нормативна документація</a>
+              <a href="#">Договори про співпрацю</a>
+              <a href="#">Залучення практиків до підготовки здобувачів</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Освітнє середовище
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Інфраструктура</a>
+                <a href="#">Аудиторний фонд кафедри</a>
+                <a href="#">Бібліотечний фонд кафедри</a>
+                <a href="#">Забезпечення особливих потреб</a>
+              </div>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="firstBlock">
+            <h1 id="firstBlock_title">TEXT</h1>
+        </div>
+        <div id="secondBlock" class="secondBlock">
+            <p id="newsBlock_title">Title</p>
+            <h2 id="newsBlock_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+        </div>
+    </main>
+    <footer id="footer">
+      <div class="footerContainer">
+      </div>
+      <div class="footerContainer">
+            <div class="footerColumn">
+                <p class="infoTitles">Address link</p>
+                <a target="_blank" href="https://goo.gl/maps/85cmfXh7hwjhvPYN8">39600, 20, Pershotravneva Street, Kremenchuk</a>
+            </div>
+            <div class="footerColumn">
+                <p class="infoTitles">Contact us</p>
+                <a href="tel:+380500888436">+380500888436</a><br>
+                <a href="tel:+380536758186">+380536758186</a><br>
+                <a href="https://t.me/Cis_Info" target="_blank">Telegram</a>
+            </div>
+            <div class="footerColumn">
+                <p class="infoTitles">E-mail</p>
+                <a href="mailto:kafkis@ukr.net">kafkis@ukr.net</a><br>
+                <a href="mailto:cis@kdu.edu.ua">cis@kdu.edu.ua</a>
+            </div>
+      </div>
+    </footer>
+    <!--Под телефоны-->
+    <div class="phone">
+      <div class="topDiv_phone">
+        <p class="topDiv_phone_title">Kremenchuk National University</p>
+        <img class="sideButton" id="sideButton" src="src/menu_button.png"></img>
+      </div>
+      <div class="sidenav">
+        <button class="dropdown-btn">Про кафедру
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Історія</a>
+          <a href="#">Склад</a>
+          <a href="#">Ліцензії і сертифікати</a>
+          <a href="#">Підсумки рейтингування</a>
+          <a href="#">Випускники</a>
+        </div>
+        <button class="dropdown-btn">Вступнику
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Інформація про освітні програми</a>
+          <a href="#">Правила прийому</a>
+          <a href="#">Програма вступних випробувань</a>
+          <a href="#">Іноземним студентам</a>
+          <a href="#">Контакти</a>
+        </div>
+        <button class="dropdown-btn">Акредитація
+          <i class="fa fa-caret-down"></i>
+        </button>
+            <div class="dropdown-container">
+              <a href="design-and-goals.html">Проектування та цілі освітньої програми</a>
+              <a href="structure-and-content.html">Структура та зміст освітньої програми</a>
+              <a href="educational-program-access.html">Доступ до освітньої програми та визнання результатів навчання</a>
+              <a href="teaching-and-learning.html">Навчання і викладання за освітньою програмою</a>
+              <a href="test-measures.html">Контрольні заходи, оцінювання здобувачів вищої освіти та академічна доброчесність</a>
+              <a href="human-resources.html">Людські ресурси</a>
+              <a href="educational-environment.html">Освітнє середовище та матеріальні ресурси</a>
+              <a href="internal-quality-assurance.html">Внутрішнє забезпечення якості освітньої програми</a>
+              <a href="transparency-and-publicity.html">Прозорість і публічність</a>
+              <a href="learning-through-research.html">Навчання через дослідження</a>
+              <a href="prospects-for-development.html">Перспективи подальшого розвитку ОП</a>
+            </div>
+        <button class="dropdown-btn">Освітня діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Освітні програми</a>
+          <a href="#">Розклад</a>
+          <a href="#">Якість освіти</a>
+          <a href="#">Неформальна і дуальна освіта</a>
+          <a href="#">Віртуальний освітній простір</a>
+        </div>
+        <button class="dropdown-btn">Наукова діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Наукові здобутки</a>
+          <a href="#">Теми НДР</a>
+          <a href="#">Наукові заходи</a>
+          <a href="#">Наукова діяльність здобувачів освіти</a>
+        </div>
+        <button class="dropdown-btn">Виховна діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">План роботи</a>
+          <a href="#">Заходи</a>
+        </div>
+        <button class="dropdown-btn">Міжнародна діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Договори про співпрацю</a>
+          <a href="#">Закордонні стажування</a>
+          <a href="#">Міжнародні здобутки</a>
+          <a href="#">Міжнародний конкурс студентських наукових робіт</a>
+        </div>
+        <button class="dropdown-btn">Практична підготовка
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Бази практик</a>
+          <a href="#">Нормативна документація</a>
+          <a href="#">Договори про співпрацю</a>
+          <a href="#">Залучення практиків до підготовки здобувачів</a>
+        </div>
+        <button class="dropdown-btn">Освітнє середовище та матеріальні ресурси
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Інфраструктура</a>
+          <a href="#">Аудиторний фонд кафедри</a>
+          <a href="#">Бібліотечний фонд кафедри</a>
+          <a href="#">Забезпечення особливих потреб</a>
+        </div>
+      </div>
+      <div class="phone_firstBlock">
+        <h1 id="phone_firstBlock_title">text</h1>
+      </div>
+      <div class="phone_secondBlock">
+        <h1 id="phone_secondBlock_title">title</h1>
+      </div>
+      <div class="phone_footer">
+        <div class="phone_footerColumn">
+            <p class="infoTitles">Address link</p>
+            <a target="_blank" href="https://goo.gl/maps/85cmfXh7hwjhvPYN8">39600, 20, Pershotravneva Street, Kremenchuk</a>
+        </div>
+        <div class="phone_footerColumn">
+            <p class="infoTitles">Contact Us</p>
+            <a href="tel:+380500888436">+380500888436</a><br>
+            <a href="tel:+380536758186">+380536758186</a><br>
+            <a href="https://t.me/Cis_Info" target="_blank">Telegram</a>
+        </div>
+        <div class="phone_footerColumn">
+            <p class="infoTitles">E-mail</p>
+            <a href="mailto:kafkis@ukr.net">kafkis@ukr.net</a><br>
+            <a href="mailto:cis@kdu.edu.ua">cis@kdu.edu.ua</a>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="scripts/scroll_lock.js"></script>
+  <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
