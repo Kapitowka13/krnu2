@@ -216,54 +216,40 @@ main {
 /**************************SECOND BLOCK******************************/
 
 .secondBlock {
-  height: 1000px;
+  height: auto;
   background: #eae8dc;
 }
-#newsBlock_title {
-  text-align: center;
-  font-size: 72px;
-  font-weight: 800;
-  color: #000;
-}
-#newsBlock_text {
+.secondBlock p {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
   text-align: center;
 }
-.newsLineBlock {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-around;
+.secondBlock .caf {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.secondBlock .caf img {
+  margin: auto;
+  margin-top: 20px;
+}
+.secondBlock .caf h6 {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+.ins_text {
+  width: 80%;
+}
+span {
+  font-weight: bold;
+}
+.st {
+  margin-bottom: 50px;
+}
 
-}
-.news {
-  width: 35%;
-  height: 400px;
-  background-color: rgb(177, 177, 177);
-  display: flex;
-  align-items: flex-end;
-  box-shadow: 0px -86px 20px -16px rgba(29, 29, 29, 0.8) inset;
-  background-position-y: center;
-  background-position-x: center;
-  background-size: cover;
-}
-.news:hover {
-  transform: scale(1.004);
-}
-#news_1 {
-  background-image: url(../src/Biden.jpg);
-}
-#news_2 {
-  background-image: url(../src/gun-bullets.webp);
-}
-#news_3 {
-  background-image: url(../src/prog.jpeg);
-}
-#news_4 {
-  background-image: url(../src/man.webp);
-}
-.newsText {
-  color: #fff;
-  padding: 10px;
-}
 
 /**************************FOOTER******************************/
 
@@ -470,9 +456,6 @@ a {
     display: none;
   }
   .title {
-    display: none;
-  }
-  main {
     display: none;
   }
   footer {
