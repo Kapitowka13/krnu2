@@ -249,6 +249,12 @@ span {
 .st {
   margin-bottom: 50px;
 }
+.instructor {
+  width: 40%;
+}
+.instructor img {
+  border-radius: 100%;
+}
 
 
 /**************************FOOTER******************************/
