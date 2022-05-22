@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>DEPARTMENT OF COMPUTER ENGINEERING AND ELECTRONICS</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js'></script>
+  <link rel="stylesheet" href="css/queryLoader.css" type="text/css">
+  <script type='text/javascript' src='scripts/queryLoader.js'></script>
+</head>
+
+<body>
+  <!--Под компы-->
+    <header>
+        <div id="title" class="title">
+          <img id="logo" src="src/logo_brown.png">
+          <h1 id="headerTitle">DEPARTMENT OF COMPUTER ENGINEERING AND ELECTRONICS</h1>
+          <button class="colorChange" id="colorToBlack"></button>
+          <button class="colorChange" id="colorToBrown"></button>
+        </div>
+        <div class="navbar" id="navbar">
+          <div class="dropdown">
+            <!--about-department-->
+            <button class="dropbtn">Про кафедру
+            </button>
+            <div class="dropdown-content">
+              <a href="history.html">Історія</a>
+              <a href="composition.html">Склад</a>
+              <a href="licenses-and-certificates.html">Ліцензії і сертифікати</a>
+              <a href="ranking-results.html">Підсумки рейтингування</a>
+              <a href="graduates.html">Випускники</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <!--entrant-->
+              <button class="dropbtn">Вступнику
+              </button>
+              <div class="dropdown-content">
+                <a href="../entrant/information.html">Інформація про освітні програми</a>
+                <a href="../entrant/admission.html">Правила прийому</a>
+                <a href="../entrant/entrance.html">Програма вступних випробувань</a>
+                <a href="../entrant/international.html">Іноземним студентам</a>
+                <a href="../entrant/contacts.html">Контакти</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <!--education-->
+              <button class="dropbtn">Освіта</button>
+              <div class="dropdown-content">
+                <a href="../education/schedule.html">Розклад</a>
+                <a href="../education/quality-of-education.html">Якість освіти</a>
+                <a href="../education/nonf-education.html">Неформальна і дуальна освіта</a>
+                <a href="../education/virtual-educational.html">Віртуальний освітній простір</a>
+                <a href="../education/bachelor.html">Перший (бакалаврський) рівень вищої освіти</a>
+                <a href="../education/master.html">Другий (магістерський) рівень вищої освіти</a>
+                <a href="../education/educational-scientific.html">Третій (освітньо-науковий) рівень вищої освіти</a>
+              </div>
+            </div>
+          <div class="dropdown">
+            <!--accreditation-->
+              <button class="dropbtn">Акредитація
+              </button>
+              <div class="dropdown-content">
+                <a href="../accreditation/design-and-goals.html">Проектування та цілі освітньої програми</a>
+                <a href="../accreditation/structure-and-content.html">Структура та зміст освітньої програми</a>
+                <a href="../accreditation/educational-program-access.html">Доступ до освітньої програми та визнання результатів навчання</a>
+                <a href="../accreditation/teaching-and-learning.html">Навчання і викладання за освітньою програмою</a>
+                <a href="../accreditation/test-measures.html">Контрольні заходи, оцінювання здобувачів вищої освіти та академічна доброчесність</a>
+                <a href="../accreditation/human-resources.html">Людські ресурси</a>
+                <a href="../accreditation/educational-environment.html">Освітнє середовище та матеріальні ресурси</a>
+                <a href="../accreditation/internal-quality-assurance.html">Внутрішнє забезпечення якості освітньої програми</a>
+                <a href="../accreditation/transparency-and-publicity.html">Прозорість і публічність</a>
+                <a href="../accreditation/learning-through-research.html">Навчання через дослідження</a>
+                <a href="../accreditation/prospects-for-development.html">Перспективи подальшого розвитку ОП</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <!--research-activities-->
+              <button class="dropbtn">Наукова діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="../research-activities/scientific-achievements.html">Наукові здобутки</a>
+                <a href="../research-activities/topics.html">Теми НДР</a>
+                <a href="../research-activities/activities.html">Наукові заходи</a>
+                <a href="../research-activities/activity-of-students.html">Наукова діяльність здобувачів освіти</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <!--educational-activities-->
+              <button class="dropbtn">Виховна діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="../educational-activities/work-plan.html">План роботи</a>
+                <a href="../educational-activities/events.html">Заходи</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <!--international-activities-->
+              <button class="dropbtn">Міжнародна діяльність
+              </button>
+              <div class="dropdown-content">
+                <a href="../international-activities/cooperation-agreements.html">Договори про співпрацю</a>
+                <a href="../international-activities/foreign-internships.html">Закордонні стажування</a>
+                <a href="../international-activities/international-achievements.html">Міжнародні здобутки</a>
+                <a href="../international-activities/international-competition.html">Міжнародний конкурс студентських наукових робіт</a>
+              </div>
+            </div>
+          <div class="dropdown">
+            <!--practic-training-->
+            <button class="dropbtn">Практична підготовка
+            </button>
+            <div class="dropdown-content">
+              <a href="../practic-training/bases-of-practice.html">Бази практик</a>
+              <a href="../practic-training/regulatory-documentation.html">Нормативна документація</a>
+              <a href="../practic-training/cooperation-agreements.html">Договори про співпрацю</a>
+              <a href="../practic-training/attracting-practitioners.html">Залучення практиків до підготовки здобувачів</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <!--educational-environment-->
+              <button class="dropbtn">Освітнє середовище
+              </button>
+              <div class="dropdown-content">
+                <a href="../educational-environment/infrastructure.html">Інфраструктура</a>
+                <a href="../educational-environment/auditorium-fund.html">Аудиторний фонд кафедри</a>
+                <a href="../educational-environment/library-fund.html">Бібліотечний фонд кафедри</a>
+                <a href="../educational-environment/providing-special-needs.html">Забезпечення особливих потреб</a>
+              </div>
+            </div>
+        </div>
+    </header>
+
+      <div class="firstBlock" style="height: 300px;">
+        <h1 id="firstBlock_title">Склад кафедри</h1>
+      </div>
+      <div class="secondBlock">
+          <div class="instructor_title" style="width: 50%; margin: auto; text-align: center;">
+            <h1 style="color: #7C9BEF;">Кухаренко Дмитро Володимирович</h1>
+            <img style="border-radius: 100%; margin: auto;" alt="" src="src/Kuharenko.png">
+            <p style="margin: auto; font-weight: 500; width: 100%;">Доцент, кандидат технічних наук</p>
+          </div>
+          <div class="instructor_info">
+              <p style="text-align: left;"><span style="font-size: 18px;">Освіта:</span>Закінчив гімназію №6  з відзнакою у 2000р. В цьому році поступив до Кременчуцького державного політехнічного університету, який закінчив з відзнакою у грудні 2005р. (Магістратура напряму «Біотехнічні та медичні апарати і системи»). З лютого 2006р. і по 2014р. працював асистентом на кафедрі «Електронних апаратів». Захистив дисертацію у спеціалізованій вченій раді Харківського національного університету радіоелектроніки із спеціальності «Біологічні та медичні прилади і системи» на тему: «Комп’ютерна система передопераційного планування хірургічної корекції патології окорухового апарату людини».<br></p>
+
+              <p style="text-align: left;"><span>Основні етапи педагогічної та наукової діяльності у вищих закладах освіти ІІІ–ІV рівня акредитації:</span> <br>Працює на посаді доцента кафедри електронних апаратів з 01.09.2014 року.<br>У 2016 році отримав атестат доцента кафедри «Електронних апаратів».<br>У 2017 році отримав премію Верховної Ради України у галузі фундаментальних і прикладних досліджень та науково-технічних розробок.<br></p>
+
+              <p style="text-align: left;"><span>Дисципліни:</span> «Медична фізика», «Оптимізація проектування радіоелектронних пристроїв», «Пристрої запису та відтворення інформації», «Проектування біотехнічних систем», «Радіотехнічні пристрої», «Цифрові системи запису та відтворення», «Вимірювально-моніторінгові комплекси в медицині», «Електродинаміка та поширення радіохвиль», «Засоби медичної імплантації», «Інноваційні підходи в технічному забеспечені лікувальних технологій», «Основи електродинамiки», «Технікометодичне забеспечення лікувально-діагностичних процесів».
+<br>
+Із зазначених дисциплін склав конспекти лекцій, навчальні та робочі навчальні програми; підготував та видав методичні вказівки щодо виконання лабораторних, практичних та самостійних робіт для студентів денної форми навчання, завдання для комплексних контрольних робіт, завдання для поточної, модульної та підсумкової перевірки знань студентів, проводить лекційні, практичні та лабораторні заняття.
+</p>
+
+
+
+              <p style="font-weight: 500; text-align: left;">Наукові праці:</p>
+              <p style="text-align: left;">
+                <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://scholar.google.com/citations?user=53HI50cAAAAJ&amp;hl=ru">Google Sholar</a><br>
+                <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://www.scopus.com/authid/detail.uri?authorId=57105553800">Scopus</a><br>
+
+                <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://orcid.org/0000-0002-2845-6881">ORCID</a>
+                <br><br>
+            </p>
+            </div>
+      </div>
+
+    <footer id="footer">
+      <div class="footerContainer">
+      </div>
+      <div class="footerContainer">
+            <div class="footerColumn">
+                <p class="infoTitles">Address link</p>
+                <a target="_blank" href="https://goo.gl/maps/85cmfXh7hwjhvPYN8">39600, 20, Pershotravneva Street, Kremenchuk</a>
+            </div>
+            <div class="footerColumn">
+                <p class="infoTitles">Contact us</p>
+                <a href="tel:+380500888436">+380500888436</a><br>
+                <a href="tel:+380536758186">+380536758186</a><br>
+                <a href="https://t.me/Cis_Info" target="_blank">Telegram</a>
+            </div>
+            <div class="footerColumn">
+                <p class="infoTitles">E-mail</p>
+                <a href="mailto:kafkis@ukr.net">kafkis@ukr.net</a><br>
+                <a href="mailto:cis@kdu.edu.ua">cis@kdu.edu.ua</a>
+            </div>
+      </div>
+    </footer>
+    <!--Под телефоны-->
+    <div class="phone">
+      <div class="topDiv_phone">
+        <p class="topDiv_phone_title">Kremenchuk National University</p>
+        <img class="sideButton" id="sideButton" src="src/menu_button.png"></img>
+      </div>
+      <div class="sidenav">
+        <button class="dropdown-btn">Про кафедру
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="history.html">Історія</a>
+          <a href="composition.html">Склад</a>
+          <a href="licenses-and-certificates.html">Ліцензії і сертифікати</a>
+          <a href="ranking-results.html">Підсумки рейтингування</a>
+          <a href="graduates.html">Випускники</a>
+        </div>
+        <button class="dropdown-btn">Вступнику
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../entrant/information.html">Інформація про освітні програми</a>
+          <a href="../entrant/admission.html">Правила прийому</a>
+          <a href="../entrant/entrance.html">Програма вступних випробувань</a>
+          <a href="../entrant/international.html">Іноземним студентам</a>
+          <a href="../entrant/contacts.html">Контакти</a>
+        </div>
+        <button class="dropdown-btn">Освітня діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../education/schedule.html">Розклад</a>
+          <a href="../education/quality-of-education.html">Якість освіти</a>
+          <a href="../education/nonf-education.html">Неформальна і дуальна освіта</a>
+          <a href="../education/virtual-educational.html">Віртуальний освітній простір</a>
+          <a href="../education/bachelor.html">Перший (бакалаврський) рівень вищої освіти</a>
+          <a href="../education/master.html">Другий (магістерський) рівень вищої освіти</a>
+          <a href="../education/educational-scientific.html">Третій (освітньо-науковий) рівень вищої освіти</a>
+        </div>
+        <button class="dropdown-btn">Акредитація
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../accreditation/design-and-goals.html">Проектування та цілі освітньої програми</a>
+          <a href="../accreditation/structure-and-content.html">Структура та зміст освітньої програми</a>
+          <a href="../accreditation/educational-program-access.html">Доступ до освітньої програми та визнання результатів навчання</a>
+          <a href="../accreditation/teaching-and-learning.html">Навчання і викладання за освітньою програмою</a>
+          <a href="../accreditation/test-measures.html">Контрольні заходи, оцінювання здобувачів вищої освіти та академічна доброчесність</a>
+          <a href="../accreditation/human-resources.html">Людські ресурси</a>
+          <a href="../accreditation/educational-environment.html">Освітнє середовище та матеріальні ресурси</a>
+          <a href="../accreditation/internal-quality-assurance.html">Внутрішнє забезпечення якості освітньої програми</a>
+          <a href="../accreditation/transparency-and-publicity.html">Прозорість і публічність</a>
+          <a href="../accreditation/learning-through-research.html">Навчання через дослідження</a>
+          <a href="../accreditation/prospects-for-development.html">Перспективи подальшого розвитку ОП</a>
+        </div>
+
+        <button class="dropdown-btn">Наукова діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../research-activities/scientific-achievements.html">Наукові здобутки</a>
+          <a href="../research-activities/topics.html">Теми НДР</a>
+          <a href="../research-activities/activities.html">Наукові заходи</a>
+          <a href="../research-activities/activity-of-students.html">Наукова діяльність здобувачів освіти</a>
+        </div>
+        <button class="dropdown-btn">Виховна діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../educational-activities/work-plan.html">План роботи</a>
+          <a href="../educational-activities/events.html">Заходи</a>
+        </div>
+        <button class="dropdown-btn">Міжнародна діяльність
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../international-activities/cooperation-agreements.html">Договори про співпрацю</a>
+          <a href="../international-activities/foreign-internships.html">Закордонні стажування</a>
+          <a href="../international-activities/international-achievements.html">Міжнародні здобутки</a>
+          <a href="../international-activities/international-competition.html">Міжнародний конкурс студентських наукових робіт</a>
+        </div>
+        <button class="dropdown-btn">Практична підготовка
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../practic-training/bases-of-practice.html">Бази практик</a>
+          <a href="../practic-training/regulatory-documentation.html">Нормативна документація</a>
+          <a href="../practic-training/cooperation-agreements.html">Договори про співпрацю</a>
+          <a href="../practic-training/attracting-practitioners.html">Залучення практиків до підготовки здобувачів</a>
+        </div>
+        <button class="dropdown-btn">Освітнє середовище та матеріальні ресурси
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="../educational-environment/infrastructure.html">Інфраструктура</a>
+          <a href="../educational-environment/auditorium-fund.html">Аудиторний фонд кафедри</a>
+          <a href="../educational-environment/library-fund.html">Бібліотечний фонд кафедри</a>
+          <a href="../educational-environment/providing-special-needs.html">Забезпечення особливих потреб</a>
+        </div>
+      </div>
+      <div class="phone_firstBlock">
+        <h1 id="phone_firstBlock_title">DEPARTMENT OF COMPUTER ENGINEERING AND ELECTRONICS</h1>
+      </div>
+      <div class="secondBlock">
+        <div class="instructor_title" style="width: 50%; margin: auto; text-align: center;">
+          <h1 style="color: #7C9BEF;">Кухаренко Дмитро Володимирович</h1>
+          <img style="border-radius: 100%; margin: auto;" src="src/Perekrest.png" alt="">
+          <p style="margin: auto; font-weight: 500; width: 100%;">Доцент, кандидат технічних наук</p>
+        </div>
+        <div class="instructor_info">
+          <p style="text-align: left;"><span style="font-size: 18px;">Освіта:</span>Закінчив гімназію №6  з відзнакою у 2000р. В цьому році поступив до Кременчуцького державного політехнічного університету, який закінчив з відзнакою у грудні 2005р. (Магістратура напряму «Біотехнічні та медичні апарати і системи»). З лютого 2006р. і по 2014р. працював асистентом на кафедрі «Електронних апаратів». Захистив дисертацію у спеціалізованій вченій раді Харківського національного університету радіоелектроніки із спеціальності «Біологічні та медичні прилади і системи» на тему: «Комп’ютерна система передопераційного планування хірургічної корекції патології окорухового апарату людини».<br></p>
+
+          <p style="text-align: left;"><span>Основні етапи педагогічної та наукової діяльності у вищих закладах освіти ІІІ–ІV рівня акредитації:</span> <br>Працює на посаді доцента кафедри електронних апаратів з 01.09.2014 року.<br>У 2016 році отримав атестат доцента кафедри «Електронних апаратів».<br>У 2017 році отримав премію Верховної Ради України у галузі фундаментальних і прикладних досліджень та науково-технічних розробок.<br></p>
+
+          <p style="text-align: left;"><span>Дисципліни:</span> «Медична фізика», «Оптимізація проектування радіоелектронних пристроїв», «Пристрої запису та відтворення інформації», «Проектування біотехнічних систем», «Радіотехнічні пристрої», «Цифрові системи запису та відтворення», «Вимірювально-моніторінгові комплекси в медицині», «Електродинаміка та поширення радіохвиль», «Засоби медичної імплантації», «Інноваційні підходи в технічному забеспечені лікувальних технологій», «Основи електродинамiки», «Технікометодичне забеспечення лікувально-діагностичних процесів».
+<br>
+Із зазначених дисциплін склав конспекти лекцій, навчальні та робочі навчальні програми; підготував та видав методичні вказівки щодо виконання лабораторних, практичних та самостійних робіт для студентів денної форми навчання, завдання для комплексних контрольних робіт, завдання для поточної, модульної та підсумкової перевірки знань студентів, проводить лекційні, практичні та лабораторні заняття.
+</p>
+
+
+
+          <p style="font-weight: 500; text-align: left;">Наукові праці:</p>
+          <p style="text-align: left;">
+            <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://scholar.google.com/citations?user=53HI50cAAAAJ&amp;hl=ru">Google Sholar</a><br>
+            <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://www.scopus.com/authid/detail.uri?authorId=57105553800">Scopus</a><br>
+
+            <a style="text-decoration: underline; color: #7C9BEF; margin-left: 3%;" href="https://orcid.org/0000-0002-2845-6881">ORCID</a>
+            <br><br>
+        </p>
+        </div>
+    </div>
+      <div class="phone_footer">
+        <div class="phone_footerColumn">
+            <p class="infoTitles">Address link</p>
+            <a target="_blank" href="https://goo.gl/maps/85cmfXh7hwjhvPYN8">39600, 20, Pershotravneva Street, Kremenchuk</a>
+        </div>
+        <div class="phone_footerColumn">
+            <p class="infoTitles">Contact Us</p>
+            <a href="tel:+380500888436">+380500888436</a><br>
+            <a href="tel:+380536758186">+380536758186</a><br>
+            <a href="https://t.me/Cis_Info" target="_blank">Telegram</a>
+        </div>
+        <div class="phone_footerColumn">
+            <p class="infoTitles">E-mail</p>
+            <a href="mailto:kafkis@ukr.net">kafkis@ukr.net</a><br>
+            <a href="mailto:cis@kdu.edu.ua">cis@kdu.edu.ua</a>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="scripts/scroll_lock.js"></script>
+  <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
