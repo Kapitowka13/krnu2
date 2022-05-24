@@ -10,7 +10,7 @@ var QueryLoader = {
 	 * before displaying the page to the user.
 	 */
 	
-	overlay: "",
+	/*overlay: "",
 	loadBar: "",
 	preloader: "",
 	items: new Array(),
@@ -168,3 +168,4 @@ var QueryLoader = {
 	}
 }
 
+*/

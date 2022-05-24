@@ -1,8 +1,8 @@
-window.onload = function () {
+/*window.onload = function () {
     setTimeout(function () {
         document.getElementById("preloader_malc").style.display = "none";
     }, 0);
-};
+};*/
 
 var darkColor = "#1C0D02";
 var gray = "#CFCFCF"
@@ -25,7 +25,7 @@ const logoImage = document.getElementById('logo');
 const colorToBlack = document.getElementById('colorToBlack');
 const colorToBrown = document.getElementById('colorToBrown');
 document.getElementsByClassName('colorChange')[1].style= "display: none";
-
+document.getElementById('logo').href="index.html"
 
 function goBlack() {
     document.body.style.background = white;
